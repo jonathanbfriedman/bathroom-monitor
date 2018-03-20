@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Second Chance | Bathroom Monitor</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link href="https://fonts.googleapis.com/css?family=Asap+Condensed|Eater|Oleo+Script+Swash+Caps|Press+Start+2P" rel="stylesheet">
@@ -15,17 +16,20 @@
 			text-align: center;
 		}
 
-		p {
+		p#tagline {
 			margin-top: 1em;
 			font-family: 'Asap Condensed', sans-serif;
+			min-height: 18.75px;
 		}
 
-		h1 {
+		h1#heading {
 			font-family: 'Eater', cursive;
+			min-height: 61.25px;
 		}
 
-		h2 {
+		h2#description {
 			font-family: 'Oleo Script Swash Caps', cursive;
+			min-height: 19.5px;
 		}
 
 		div#door-status {
@@ -81,13 +85,13 @@
 
 <body>
 
-<p>Here's Your</p>
+<p id="tagline">Here's Your</p>
 
-<h1>Second Chance</h1>
+<h1 id="heading">Second Chance</h1>
 
-<h2>Bathroom Monitor</h2>
+<h2 id="description">Bathroom Monitor</h2>
 
-<div id="door-status">Loading door status. Please wait.</div>
+<div id="door-status">Loading...</div>
 
 <div id="audrey">
 <!-- manually paste svg so fill can be edited with javascript -->
