@@ -57,6 +57,8 @@
 	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 	<script src="/socket.io/socket.io.js"></script>
 	<script>
+	  var titleText = "Second Chance | Bathroom Monitor"
+	  document.title = titleText;
 	  $(function () {
 		      var socket = io();
 		      // when 'door change' signal is sent, text changes between 'occupied' and 'vacant'
@@ -67,6 +69,7 @@
 			    if (1 - door) {
 				    // vacant
 				    // console.log("vacant turns green");
+				    document.title = '\u2713 ' + titleText; // add check mark in page title
 				    document.getElementById('triangleBackground').style.fill = '#008000'; // set triangleBackground to #008000
 				    document.getElementById('triangleShadow').style.fill = '#005500'; // set triangleShadow to #005500
 				    document.getElementById('triangleStrip').style.fill = '#008000'; // set triangleStrip to #000800
@@ -74,6 +77,7 @@
 			    else {
 				    // occupied
 				    // console.log("occupied turns red");
+				    document.title = '\u2717 ' + titleText; // add x mark in page title
 				    document.getElementById('triangleBackground').style.fill = '#800000'; // set triangleBackground to #800000
 				    document.getElementById('triangleShadow').style.fill = '#550000'; // set triangleShadow to #550000
 				    document.getElementById('triangleStrip').style.fill = '#800000'; // set triangleStrip to #800000
